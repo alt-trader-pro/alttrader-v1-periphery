@@ -6,9 +6,9 @@ import './IMulticall.sol';
 import './ISelfPermit.sol';
 import './IPoolInitializer.sol';
 
-/// @title V3 Migrator
+/// @title V1 Migrator
 /// @notice Enables migration of liqudity from Uniswap v2-compatible pairs into Uniswap v3 pools
-interface IV3Migrator is IMulticall, ISelfPermit, IPoolInitializer {
+interface IV1Migrator is IMulticall, ISelfPermit, IPoolInitializer {
     struct MigrateParams {
         address pair; // the Uniswap v2-compatible pair
         uint256 liquidityToMigrate; // expected to be balanceOf(msg.sender)
